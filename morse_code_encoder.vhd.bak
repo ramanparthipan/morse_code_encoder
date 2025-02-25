@@ -1,0 +1,3 @@
+entity morse_code_encoder is
+	port ();
+end morse_code_encoder
