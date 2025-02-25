@@ -1,0 +1,5 @@
+|morse_code_encoder
+clk => ~NO_FANOUT~
+led <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
