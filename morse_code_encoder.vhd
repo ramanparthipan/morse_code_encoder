@@ -22,10 +22,10 @@ begin
 		port map (clk => clk, slow_clk => tick);
 	process (reset, start)
 	begin
-		if reset = '1' then
+		if reset = '0' then -- push buttons '0' when pressed
 			state <= W;
 		
-		elsif start = '1' then
+		elsif start = '0' then
 			if sw = "000" then
 				state <= A;
 			elsif sw = "001" then
