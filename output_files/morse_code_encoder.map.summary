@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Feb 27 11:23:00 2025
+Analysis & Synthesis Status : Successful - Thu Feb 27 13:57:52 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : morse_code_encoder
 Top-level Entity Name : morse_code_encoder
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
+Total registers : 25
 Total pins : 7
 Total virtual pins : 0
 Total block memory bits : 0

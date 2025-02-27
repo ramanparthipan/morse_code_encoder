@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity morse_code_encoder is
 	port (clk : in std_logic;
-		sw : in std_logic_vector(0 to 2);
+		sw : in std_logic_vector(2 downto 0);
 		start: in std_logic;
 		reset: in std_logic;
 		led: out std_logic);
@@ -47,10 +47,30 @@ begin
 	end process;
 	
 	process (state)
+		variable count : integer;
+		variable previous_tick : std_logic;
 	begin
 		case state is
 			when A =>
-				led <= '0';
+				previous_tick := '0';
+				count := 0;
+				if (tick = '1' and previous_tick = '0') then
+					count := count + 1;
+					previous_tick := '1';
+				end if;
+				if (tick = '0' and previous_tick = '1') then
+					previous_tick := '0';
+				end if;
+				
+				if count = 1 then
+					led <= '1';
+				elsif count = 2 then
+					led <= '0';
+				elsif count = 3 then
+					led <= '1';
+				elsif count = 6 then
+					led <= '0';
+				end if;
 			when B =>
 				led <= '1';
 			when C =>

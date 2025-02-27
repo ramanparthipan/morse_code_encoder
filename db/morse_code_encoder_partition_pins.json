@@ -8,7 +8,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw[2]",
+					"name" : "sw[0]",
 					"strict" : false
 				},
 				{
@@ -16,7 +16,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw[0]",
+					"name" : "sw[2]",
 					"strict" : false
 				},
 				{
@@ -25,6 +25,10 @@
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]
