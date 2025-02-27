@@ -50,13 +50,13 @@ begin
 	begin
 		case state is
 			when A =>
-				led <= '1';
+				led <= '0';
 			when B =>
 				led <= '1';
 			when C =>
 				led <= '1';
 			when others =>
-				led <= '1';
+				led <= '0';
 		end case;
 	end process;
 end behaviour;
