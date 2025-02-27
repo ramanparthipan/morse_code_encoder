@@ -1,5 +1,5 @@
 Analysis & Synthesis report for morse_code_encoder
-Tue Feb 25 14:47:33 2025
+Thu Feb 27 09:37:11 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "counter:u1"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 25 14:47:32 2025          ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 27 09:37:11 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; morse_code_encoder                             ;
 ; Top-level Entity Name           ; morse_code_encoder                             ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 2                                              ;
+; Total pins                      ; 7                                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -171,6 +172,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; components.vhd                   ; yes             ; User VHDL File  ; C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd         ;         ;
 ; morse_code_encoder.vhd           ; yes             ; User VHDL File  ; C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd ;         ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
 
@@ -191,13 +193,13 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 2     ;
+; I/O pins                                    ; 7     ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 2     ;
+; Total fan-out                               ; 7     ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -207,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; |morse_code_encoder        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |morse_code_encoder ; morse_code_encoder ; work         ;
+; |morse_code_encoder        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 7    ; 0            ; |morse_code_encoder ; morse_code_encoder ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -227,6 +229,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:u1"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; slow_clk ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -235,7 +246,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 2                           ;
+; boundary_port         ; 7                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -257,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Feb 25 14:47:24 2025
+    Info: Processing started: Thu Feb 27 09:37:03 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off morse_code_encoder -c morse_code_encoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -265,23 +276,47 @@ Info (12021): Found 2 design units, including 1 entities, in source file compone
     Info (12022): Found design unit 1: counter-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 10
     Info (12023): Found entity 1: counter File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file morse_code_encoder.vhd
-    Info (12022): Found design unit 1: morse_code_encoder-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 9
+    Info (12022): Found design unit 1: morse_code_encoder-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 12
     Info (12023): Found entity 1: morse_code_encoder File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 4
 Info (12127): Elaborating entity "morse_code_encoder" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at morse_code_encoder.vhd(6): used implicit default value for signal "led" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 6
+Warning (10036): Verilog HDL or VHDL warning at morse_code_encoder.vhd(19): object "tick" assigned a value but never read File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(29): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(31): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(33): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(35): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(37): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(39): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(41): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(43): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 43
+Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(23): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.H" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.G" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.F" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.E" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.D" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.C" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.B" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.A" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (10041): Inferred latch for "state.W" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
+Info (12128): Elaborating entity "counter" for hierarchy "counter:u1" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 21
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led" is stuck at GND File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 6
+    Warning (13410): Pin "led" is stuck at VCC File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 9
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 5
-Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+    Warning (15610): No output dependent on input pin "sw[2]" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 6
+    Warning (15610): No output dependent on input pin "sw[1]" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 6
+    Warning (15610): No output dependent on input pin "sw[0]" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 6
+    Warning (15610): No output dependent on input pin "start" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 7
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 8
+Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Tue Feb 25 14:47:33 2025
-    Info: Elapsed time: 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Thu Feb 27 09:37:11 2025
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:10
 
 
