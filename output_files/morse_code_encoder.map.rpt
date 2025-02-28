@@ -1,5 +1,5 @@
 Analysis & Synthesis report for morse_code_encoder
-Fri Feb 28 15:40:42 2025
+Fri Feb 28 16:21:42 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Feb 28 15:40:42 2025              ;
+; Analysis & Synthesis Status ; Failed - Fri Feb 28 16:21:42 2025              ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; morse_code_encoder                             ;
 ; Top-level Entity Name       ; morse_code_encoder                             ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Feb 28 15:40:36 2025
+    Info: Processing started: Fri Feb 28 16:21:37 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off morse_code_encoder -c morse_code_encoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -174,37 +174,42 @@ Info (12021): Found 2 design units, including 1 entities, in source file morse_c
     Info (12022): Found design unit 1: morse_code_encoder-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 12
     Info (12023): Found entity 1: morse_code_encoder File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 4
 Info (12127): Elaborating entity "morse_code_encoder" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(49): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 49
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(51): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 51
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(53): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(55): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 55
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(57): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(59): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(61): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(63): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 63
-Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(42): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(42): inferring latch(es) for signal or variable "en", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "en[0]" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.H" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.G" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.F" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.E" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.D" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.C" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.B" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.A" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (10041): Inferred latch for "state.W" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
-Info (12128): Elaborating entity "counter" for hierarchy "counter:u1" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 34
-Info (12128): Elaborating entity "morse_code_displayer" for hierarchy "morse_code_displayer:u_display_a" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at components.vhd(49): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 49
-Warning (10492): VHDL Process Statement warning at components.vhd(59): signal "sequence" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 59
-Error (10818): Can't infer register for "led" at components.vhd(59) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 59
-Error (10822): HDL error at components.vhd(50): couldn't implement registers for assignments on this clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 50
-Error (12152): Can't elaborate user hierarchy "morse_code_displayer:u_display_a" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 38
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 13 warnings
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(34): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(36): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(38): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(40): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(42): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(44): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(46): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(48): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 48
+Error (10818): Can't infer register for "state.H" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.H" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.G" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.G" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.F" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.F" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.E" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.E" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.D" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.D" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.C" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.C" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.B" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.B" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.A3" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.A3" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.A2" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.A2" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.A1" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.A1" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10818): Can't infer register for "state.W" at morse_code_encoder.vhd(53) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Info (10041): Inferred latch for "state.W" at morse_code_encoder.vhd(27) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 27
+Error (10822): HDL error at morse_code_encoder.vhd(53): couldn't implement registers for assignments on this clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 13 errors, 9 warnings
     Error: Peak virtual memory: 4852 megabytes
-    Error: Processing ended: Fri Feb 28 15:40:42 2025
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:02
+    Error: Processing ended: Fri Feb 28 16:21:42 2025
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:01
 
 

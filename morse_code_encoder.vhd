@@ -16,38 +16,23 @@ component counter
 	slow_clk: out std_logic);
 end component;
 
-component morse_code_displayer
-	generic (n : integer);
-	port (tick : in std_logic;
-	sequence : in std_logic_vector(0 to n-1);
-	en : in std_logic; -- enable
-	led : out std_logic);
-end component;
-
-type state_type is (W, A, B, C, D, E, F, G, H);
+type state_type is (W, A1, A2, A3, B, C, D, E, F, G, H);
 signal state : state_type;
 signal tick : std_logic;
-signal en : std_logic_vector(0 to 7); -- represents enable signal for each letter
-signal sequence_a : std_logic_vector(0 to 4);
 
 begin
 	u1: counter
 		port map (clk => clk, slow_clk => tick);
 	
-	sequence_a <= "10111";	
-	u_display_a : morse_code_displayer
-		generic map (n => 5)
-		port map(tick => tick, sequence => sequence_a, en => en(0), led => led);
-	
-	process (reset, start)
+	process (reset, start, tick)
+		variable timer : integer := 1;
 	begin
 		if reset = '0' then -- push buttons '0' when pressed
 			state <= W;
-			en <= "00000000";
 		
 		elsif start = '0' then
 			if sw = "000" then
-				state <= A;
+				state <= A1;
 			elsif sw = "001" then
 				state <= B;
 			elsif sw = "010" then
@@ -64,21 +49,38 @@ begin
 				state <= H;
 			end if;
 		end if;
-	end process;
-	
-	process (state)
-		variable count : integer;
-		variable previous_tick : std_logic;
-	begin
-		case state is
-			when A =>
-				null;
-			when B =>
-				null;
-			when C =>
-				null;
+		
+		if rising_edge(tick) then
+			case (state) is
+			when A1 =>
+				led <= '1';
+				if timer = 0 then
+					state <= A2;
+					timer := 1;
+				else
+					timer := timer - 1;
+				end if;
+			when A2 =>
+				led <= '0';
+				if timer = 0 then
+					state <= A3;
+					timer := 3;
+				else
+					timer := timer - 1;
+				end if;
+			when A3 =>
+				led <= '1';
+				if timer = 0 then
+					state <= W;
+					timer := 1;
+				else
+					timer := timer - 1;
+				end if;
 			when others =>
 				null;
-		end case;
+			end case;
+		end if;
 	end process;
+	
+
 end behaviour;
