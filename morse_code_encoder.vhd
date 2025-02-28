@@ -10,20 +10,40 @@ entity morse_code_encoder is
 end morse_code_encoder;
 
 architecture behaviour of morse_code_encoder is
+
 component counter
 	port (clk : in std_logic;
 	slow_clk: out std_logic);
 end component;
+
+component morse_code_displayer
+	generic (n : integer);
+	port (tick : in std_logic;
+	sequence : in std_logic_vector(0 to n-1);
+	en : in std_logic; -- enable
+	led : out std_logic);
+end component;
+
 type state_type is (W, A, B, C, D, E, F, G, H);
 signal state : state_type;
 signal tick : std_logic;
+signal en : std_logic_vector(0 to 7); -- represents enable signal for each letter
+signal sequence_a : std_logic_vector(0 to 4);
+
 begin
 	u1: counter
 		port map (clk => clk, slow_clk => tick);
+	
+	sequence_a <= "10111";	
+	u_display_a : morse_code_displayer
+		generic map (n => 5)
+		port map(tick => tick, sequence => sequence_a, en => en(0), led => led);
+	
 	process (reset, start)
 	begin
 		if reset = '0' then -- push buttons '0' when pressed
 			state <= W;
+			en <= "00000000";
 		
 		elsif start = '0' then
 			if sw = "000" then
@@ -52,31 +72,13 @@ begin
 	begin
 		case state is
 			when A =>
-				previous_tick := '0';
-				count := 0;
-				if (tick = '1' and previous_tick = '0') then
-					count := count + 1;
-					previous_tick := '1';
-				end if;
-				if (tick = '0' and previous_tick = '1') then
-					previous_tick := '0';
-				end if;
-				
-				if count = 1 then
-					led <= '1';
-				elsif count = 2 then
-					led <= '0';
-				elsif count = 3 then
-					led <= '1';
-				elsif count = 6 then
-					led <= '0';
-				end if;
+				null;
 			when B =>
-				led <= '1';
+				null;
 			when C =>
-				led <= '1';
+				null;
 			when others =>
-				led <= '0';
+				null;
 		end case;
 	end process;
 end behaviour;

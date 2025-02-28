@@ -1,5 +1,5 @@
 Analysis & Synthesis report for morse_code_encoder
-Thu Feb 27 13:57:52 2025
+Fri Feb 28 15:40:42 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 27 13:57:52 2025          ;
-; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                   ; morse_code_encoder                             ;
-; Top-level Entity Name           ; morse_code_encoder                             ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 25                                             ;
-; Total pins                      ; 7                                              ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-----------------------------+------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Fri Feb 28 15:40:42 2025              ;
+; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name               ; morse_code_encoder                             ;
+; Top-level Entity Name       ; morse_code_encoder                             ;
+; Family                      ; Cyclone V                                      ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -156,127 +144,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-; components.vhd                   ; yes             ; User VHDL File  ; C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd         ;         ;
-; morse_code_encoder.vhd           ; yes             ; User VHDL File  ; C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 21        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 38        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 4         ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 3         ;
-;     -- <=3 input functions                  ; 30        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 25        ;
-;                                             ;           ;
-; I/O pins                                    ; 7         ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 25        ;
-; Total fan-out                               ; 163       ;
-; Average fan-out                             ; 2.12      ;
-+---------------------------------------------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name        ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+--------------------+--------------+
-; |morse_code_encoder        ; 38 (9)              ; 25 (0)                    ; 0                 ; 0          ; 7    ; 0            ; |morse_code_encoder            ; morse_code_encoder ; work         ;
-;    |counter:u1|            ; 29 (29)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |morse_code_encoder|counter:u1 ; counter            ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+--------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; led$latch                                          ; Selector0           ; yes                    ;
-; state.B_407                                        ; start               ; yes                    ;
-; state.C_387                                        ; start               ; yes                    ;
-; state.A_427                                        ; start               ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 25    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 25                          ;
-;     plain             ; 25                          ;
-; arriav_lcell_comb     ; 38                          ;
-;     arith             ; 23                          ;
-;         1 data inputs ; 22                          ;
-;         2 data inputs ; 1                           ;
-;     normal            ; 15                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 7                           ;
-;                       ;                             ;
-; Max LUT depth         ; 3.20                        ;
-; Average LUT depth     ; 2.33                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -285,53 +161,50 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Feb 27 13:57:44 2025
+    Info: Processing started: Fri Feb 28 15:40:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off morse_code_encoder -c morse_code_encoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file components.vhd
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 4 design units, including 2 entities, in source file components.vhd
     Info (12022): Found design unit 1: counter-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 10
+    Info (12022): Found design unit 2: morse_code_displayer-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 39
     Info (12023): Found entity 1: counter File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 5
+    Info (12023): Found entity 2: morse_code_displayer File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 31
 Info (12021): Found 2 design units, including 1 entities, in source file morse_code_encoder.vhd
     Info (12022): Found design unit 1: morse_code_encoder-behaviour File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 12
     Info (12023): Found entity 1: morse_code_encoder File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 4
 Info (12127): Elaborating entity "morse_code_encoder" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(29): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(31): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(33): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(35): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(37): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(39): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(41): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 41
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(43): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 43
-Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(23): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(57): signal "tick" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(61): signal "tick" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 61
-Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(49): inferring latch(es) for signal or variable "led", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 49
-Info (10041): Inferred latch for "led" at morse_code_encoder.vhd(49) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 49
-Info (10041): Inferred latch for "state.H" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.G" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.F" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.E" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.D" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.C" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.B" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.A" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (10041): Inferred latch for "state.W" at morse_code_encoder.vhd(23) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (12128): Elaborating entity "counter" for hierarchy "counter:u1" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 21
-Warning (13012): Latch led$latch has unsafe behavior File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.A_427 File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 23
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 38 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Thu Feb 27 13:57:52 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:11
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(49): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(51): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(53): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(55): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(57): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(59): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(61): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at morse_code_encoder.vhd(63): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 63
+Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(42): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at morse_code_encoder.vhd(42): inferring latch(es) for signal or variable "en", which holds its previous value in one or more paths through the process File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "en[0]" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.H" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.G" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.F" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.E" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.D" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.C" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.B" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.A" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (10041): Inferred latch for "state.W" at morse_code_encoder.vhd(42) File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 42
+Info (12128): Elaborating entity "counter" for hierarchy "counter:u1" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 34
+Info (12128): Elaborating entity "morse_code_displayer" for hierarchy "morse_code_displayer:u_display_a" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at components.vhd(49): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at components.vhd(59): signal "sequence" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 59
+Error (10818): Can't infer register for "led" at components.vhd(59) because it does not hold its value outside the clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 59
+Error (10822): HDL error at components.vhd(50): couldn't implement registers for assignments on this clock edge File: C:/Users/rp732/3B2_rp732/morse_code_encoder/components.vhd Line: 50
+Error (12152): Can't elaborate user hierarchy "morse_code_displayer:u_display_a" File: C:/Users/rp732/3B2_rp732/morse_code_encoder/morse_code_encoder.vhd Line: 38
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 13 warnings
+    Error: Peak virtual memory: 4852 megabytes
+    Error: Processing ended: Fri Feb 28 15:40:42 2025
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:02
 
 
