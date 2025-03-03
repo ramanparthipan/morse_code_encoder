@@ -1,5 +1,5 @@
 Flow report for morse_code_encoder
-Fri Feb 28 16:21:42 2025
+Mon Mar  3 16:23:33 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Fri Feb 28 16:21:42 2025         ;
+; Flow Status                 ; Flow Failed - Mon Mar  3 16:23:33 2025         ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; morse_code_encoder                             ;
 ; Top-level Entity Name       ; morse_code_encoder                             ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/28/2025 16:21:37 ;
+; Start date & time ; 03/03/2025 16:23:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; morse_code_encoder  ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 84486697136013.174075969706460         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 158937119693718.174101900616928        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,8 +91,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4852 MB             ; 00:00:01                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4854 MB             ; 00:00:10                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,7 +101,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EW212            ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EW210            ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

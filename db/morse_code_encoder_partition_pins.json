@@ -8,6 +8,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "led_test",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "sw[0]",
 					"strict" : false
 				},
@@ -17,14 +33,6 @@
 				},
 				{
 					"name" : "sw[2]",
-					"strict" : false
-				},
-				{
-					"name" : "start",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
 					"strict" : false
 				}
 			]

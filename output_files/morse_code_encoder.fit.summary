@@ -1,13 +1,13 @@
-Fitter Status : Successful - Fri Feb 28 15:05:21 2025
+Fitter Status : Successful - Mon Mar  3 16:21:03 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : morse_code_encoder
 Top-level Entity Name : morse_code_encoder
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 4 / 32,070 ( < 1 % )
-Total registers : 0
-Total pins : 7 / 457 ( 2 % )
+Logic utilization (in ALMs) : 80 / 32,070 ( < 1 % )
+Total registers : 33
+Total pins : 8 / 457 ( 2 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

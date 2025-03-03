@@ -6,7 +6,8 @@ entity morse_code_encoder is
 		sw : in std_logic_vector(2 downto 0);
 		start: in std_logic;
 		reset: in std_logic;
-		led: out std_logic);
+		led: out std_logic;
+		led_test: out std_logic);
 end morse_code_encoder;
 
 architecture behaviour of morse_code_encoder is
@@ -24,8 +25,9 @@ begin
 	u1: counter
 		port map (clk => clk, slow_clk => tick);
 	
-	process (reset, start, tick)
+	process (reset, start, clk)
 		variable timer : integer := 1;
+		variable previous_tick : std_logic := '0';
 	begin
 		if reset = '0' then -- push buttons '0' when pressed
 			state <= W;
@@ -50,7 +52,45 @@ begin
 			end if;
 		end if;
 		
-		if rising_edge(tick) then
+		
+		--if tick = '1' then
+		--	case (state) is
+		--	when A1 =>
+		--		led <= '1';
+		--		if timer = 0 then
+		--			state <= A2;
+		--			timer := 1;
+		--		else
+		--			timer := timer - 1;
+		--		end if;
+		--	when A2 =>
+		--		led <= '0';
+		--		if timer = 0 then
+		--			state <= A3;
+		--			timer := 3;
+		--		else
+		--			timer := timer - 1;
+		--		end if;
+		--	when A3 =>
+		--		led <= '1';
+		--		if timer = 0 then
+		--			state <= W;
+		--			timer := 1;
+		--		else
+		--			timer := timer - 1;
+		--		end if;
+		--	when W =>
+		--		led <= '0';
+		--		timer := 1;
+		--	when others =>
+		--		null;
+		--	end case;
+		--end if;
+	
+		
+		
+		if (tick = '1' and previous_tick = '0') then
+			previous_tick := '1';
 			case (state) is
 			when A1 =>
 				led <= '1';
@@ -76,11 +116,18 @@ begin
 				else
 					timer := timer - 1;
 				end if;
+			when W =>
+				led <= '0';
+				timer := 1;
 			when others =>
 				null;
 			end case;
+		elsif (tick = '0' and previous_tick = '1') then
+			previous_tick := '0';
 		end if;
-	end process;
+		end process;
+	
+	led_test <= tick;
 	
 
 end behaviour;
