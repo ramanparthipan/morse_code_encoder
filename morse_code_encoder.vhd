@@ -11,11 +11,6 @@ end morse_code_encoder;
 
 architecture behaviour of morse_code_encoder is
 
-component counter
-	port (clk : in std_logic;
-	slow_clk: out std_logic);
-end component;
-
 type state_type is (W, 
 A0, A1, A2, A3, 
 B0, B1, B2, B3, B4, B5, B6, B7, 
@@ -28,12 +23,8 @@ H0, H1, H2, H3, H4, H5, H6, H7
 );
 
 signal state : state_type;
-signal tick : std_logic;
 
 begin
-	u1: counter
-		port map (clk => clk, slow_clk => tick);
-	
 	process (reset, clk)
 		variable timer : integer := 1;
 		variable count : integer := 0;

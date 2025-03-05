@@ -1,5 +1,5 @@
 Flow report for morse_code_encoder
-Tue Mar  4 10:51:34 2025
+Wed Mar  5 10:25:39 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar  4 10:51:29 2025          ;
+; Flow Status                     ; Successful - Wed Mar  5 10:25:33 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; morse_code_encoder                             ;
 ; Top-level Entity Name           ; morse_code_encoder                             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2025 10:50:25 ;
+; Start date & time ; 03/05/2025 10:24:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; morse_code_encoder  ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 158937119694086.174108542516632        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 158937119694413.174117027119704        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -97,10 +97,10 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4889 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:48     ; 1.0                     ; 6727 MB             ; 00:00:47                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4875 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 5164 MB             ; 00:00:03                           ;
-; Total                ; 00:01:06     ; --                      ; --                  ; 00:01:05                           ;
+; Fitter               ; 00:00:46     ; 1.0                     ; 6737 MB             ; 00:00:52                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4867 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 5168 MB             ; 00:00:03                           ;
+; Total                ; 00:01:05     ; --                      ; --                  ; 00:01:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +109,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EW202            ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; EW202            ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; EW202            ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; EW202            ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EW203            ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; EW203            ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; EW203            ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; EW203            ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

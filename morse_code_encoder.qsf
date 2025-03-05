@@ -50,8 +50,6 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE components.vhd
-set_global_assignment -name VHDL_FILE morse_code_encoder.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_AA14 -to reset
@@ -61,4 +59,5 @@ set_location_assignment PIN_V16 -to led
 set_location_assignment PIN_AB12 -to sw[0]
 set_location_assignment PIN_AC12 -to sw[1]
 set_location_assignment PIN_AF9 -to sw[2]
+set_global_assignment -name VHDL_FILE morse_code_encoder.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
